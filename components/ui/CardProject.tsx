@@ -32,7 +32,7 @@ export function CardProject({ data }: { data: CardProjectProps }) {
           <p className="font-normal text-sm text-gray-50 relative z-10 my-2">
             {data?.description}
           </p>
-          <div className="flex flex-col justify-start items-start gap-4 lg:flex-row lg:justify-between lg:items-center z-10 ">
+          <div className="w-full flex flex-col justify-start items-start gap-4 lg:gap-0 lg:flex-row lg:justify-between lg:items-center z-10 ">
             <div className="flex flex-row items-center">
               {data?.iconLists.map((icon, index) => (
                 <img

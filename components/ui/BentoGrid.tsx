@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import ConfettiExplosion from "react-confetti-explosion";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
 export const BentoGrid = ({
@@ -17,7 +16,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 grid-rows-5 md:grid-cols-6 md:grid-rows-6 lg:grid-cols-5 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 md:grid-cols-6 md:grid-rows-6 lg:grid-cols-5 lg:grid-rows-3 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -47,21 +46,13 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["ReactJS", "NextJS", "Typescript", "Figma"];
   const rightLists = ["Node", "Express", "MongoDB", "MySQL"];
-
+  const [isExploding, setIsExploding] = useState(false);
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     const text = "devpbdias@gmail.com";
     navigator.clipboard.writeText(text);
+    setIsExploding(true);
     setCopied(true);
   };
 
@@ -115,14 +106,18 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          <div className="font-sans text-lg lg:text-3xl max-w-96 font-bold z-10">
+          <div
+            className={`font-sans ${
+              id === 2 && "md:text-base lg:text-base"
+            } text-lg lg:text-3xl max-w-96 font-bold z-10`}
+          >
             {title}
           </div>
 
           {id === 1 && <GridGlobe />}
 
           {id === 3 && (
-            <div className="flex flex-col gap-1 lg:gap-3 w-fit -bottom-10 absolute -right-1 lg:-right-2">
+            <div className="flex flex-col gap-1 lg:gap-3 w-fit -bottom-10 md:bottom-6 absolute -right-1 lg:-right-1">
               <div className="flex flex-row gap-3 md:gap-3 lg:gap-3">
                 {leftLists.map((item, i) => (
                   <span
@@ -154,7 +149,14 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {isExploding && (
+                  <ConfettiExplosion
+                    force={0.6}
+                    duration={2500}
+                    particleCount={80}
+                    width={1000}
+                  />
+                )}
               </div>
 
               <MagicButton

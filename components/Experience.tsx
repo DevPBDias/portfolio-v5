@@ -40,7 +40,7 @@ const Experience = () => {
                       className="flex flex-row justify-center items-center gap-2"
                       key={i}
                     >
-                      <FaCheck className="w-10 h-10" /> {item}
+                      <FaCheck className="lg:w-6 lg:h-6 w-4 h-4" /> {item}
                     </span>
                   ))}
                 </p>

@@ -23,9 +23,9 @@ export const gridItems = [
       "Sou Paulo Bruno, desenvolvedor web com foco em front-end, com sólidos conhecimentos em React, Next.js e Node.js. Especializado em UX/UI Design e Figma.",
     description: "",
     className:
-      "row-span-1 lg:col-span-2 lg:row-span-5 md:col-span-6 md:row-span-2",
+      "row-span-1 lg:col-span-2 lg:row-span-2 md:col-span-6 md:row-span-2",
     imgClassName: "md:opacity-30 opacity-0",
-    titleClassName: "justify-end md:text-sm",
+    titleClassName: "justify-end md:text-xs",
     img: "/me-video.gif",
     spareImg: "",
   },
@@ -33,10 +33,9 @@ export const gridItems = [
     id: 3,
     title: "Minhas tech stacks",
     description: "Procuro sempre aprender novas tecnologias",
-    className:
-      "row-span-1 lg:col-span-3 lg:row-span-2 md:col-span-6 md:row-span-1",
+    className: "row-span-1 lg:col-span-3 md:col-span-6 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-center",
+    titleClassName: "justify-center lg:justify-start",
     img: "",
     spareImg: "",
   },
@@ -46,9 +45,9 @@ export const gridItems = [
       "Atualmente estou estudando na Escola da Nuvem e colaborando com um projeto voluntário",
     description: "2025",
     className:
-      " row-span-1 md:col-span-6 md:row-span-1 lg:col-span-3 lg:row-span-3",
+      " row-span-1 md:col-span-6 md:row-span-1 lg:col-span-3 lg:row-span-1",
     imgClassName:
-      "absolute right-0 bottom-0 w-24 md:w-32 lg:w-60 rounded-lg opcity-30",
+      "absolute right-0 bottom-0 w-24 md:w-32 2xl:w-60 rounded-lg opcity-30",
     titleClassName: "justify-center",
     img: "/logo-nuvem.png",
     spareImg: "/grid.svg",
@@ -57,7 +56,8 @@ export const gridItems = [
     id: 5,
     title: "Pronto para transformar sua ideia em realidade? Fale comigo!",
     description: "",
-    className: "row-span-1 md:col-span-6 md:row-span-1 lg:row-span-2",
+    className:
+      "row-span-1 md:col-span-6 md:row-span-1 lg:col-span-2 lg:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
@@ -89,7 +89,7 @@ export const projects = [
     id: 3,
     title: "App de trailers",
     description:
-      "Projeto pessoal de um mockup de UX/UI Design feito por mim. Foi desenvolvido um app mobile em que o usuário faz login, edita suas informações e navega por filmes, series e animes",
+      "Projeto pessoal de um mockup de UX/UI Design feito por mim. Foi desenvolvido um app mobile para navegar por filmes, series e animes",
     img: "/trailersApp.png",
     link: "https://github.com/DevPBDias/app-trailers",
     iconLists: [
