@@ -132,7 +132,7 @@ export const workExperience = [
       "Refatoração de código utilizando design patterns, separando lógicas complexas em componentes, hooks e contextos",
       "Criação de nova Home no Figma, versionamento com Git/GitHub e participação ativa em reuniões semanais da equipe.",
     ],
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
 ];
@@ -141,16 +141,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "https://www.linkedin.com/in/devpaulobrunomdias/",
+    link: "https://github.com/DevPBDias",
   },
   {
     id: 2,
     img: "/be.png",
-    link: "https://www.behance.net/paulobrunodias",
+    link: "https://www.behance.net/pbdias",
   },
   {
     id: 3,
     img: "/link.svg",
-    link: "https://github.com/DevPBDias",
+    link: "https://www.linkedin.com/in/devpaulobrunomdias/",
   },
 ];
