@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
@@ -38,7 +37,7 @@ const Approach = () => {
         </Card>
         <Card
           title="Revisão & Lançamento"
-          icon={<AceternityIcon order="Phase 3" />}
+          icon={<AceternityIcon order="Fase 3" />}
           des="Este é o estágio final: validação do que foi feito, apresentação ao cliente e o tão esperado lançamento do projeto."
         >
           <CanvasRevealEffect

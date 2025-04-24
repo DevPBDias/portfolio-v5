@@ -35,7 +35,7 @@ export const gridItems = [
     description: "Procuro sempre aprender novas tecnologias",
     className: "row-span-1 lg:col-span-3 md:col-span-6 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-center lg:justify-start",
+    titleClassName: "justify-start",
     img: "",
     spareImg: "",
   },
@@ -45,10 +45,10 @@ export const gridItems = [
       "Atualmente estou estudando na Escola da Nuvem e colaborando com um projeto voluntário",
     description: "2025",
     className:
-      " row-span-1 md:col-span-6 md:row-span-1 lg:col-span-3 lg:row-span-1",
+      "row-span-1 py-14 md:col-span-6 md:row-span-1 lg:col-span-3 lg:row-span-1",
     imgClassName:
-      "absolute right-0 bottom-0 w-24 md:w-32 2xl:w-60 rounded-lg opcity-30",
-    titleClassName: "justify-center",
+      "absolute right-0 bottom-12 md:bottom-0  md:opacity-100 w-24 md:w-32 2xl:w-60 rounded-lg opcity-30",
+    titleClassName: "justify-start",
     img: "/logo-nuvem.png",
     spareImg: "/grid.svg",
   },

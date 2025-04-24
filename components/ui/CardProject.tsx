@@ -12,49 +12,49 @@ type CardProjectProps = {
   link: string;
 };
 
-export function CardProject({ data }: { data: CardProjectProps }) {
+export const CardProject = ({ data }: { data: CardProjectProps }) => {
   return (
-    <div className="w-full group/card">
-      <div
-        className={cn(
-          "cursor-pointer overflow-hidden relative card h-[600px] rounded-md shadow-xl w-full border mx-auto backgroundImage flex flex-col justify-end hover:scale-105 transition-transform duration-300 ease-in-out"
-        )}
-        style={{
-          backgroundImage: `url(${data?.img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="bg-black-100/85 p-4 flex flex-col justify-start items-start w-full gap-2">
-          <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+    <div
+      className={cn(
+        "group/bento shadow-input flex flex-col justify-between rounded-xl border border-neutral-200 bg-white transition duration-200 hover:shadow-xl dark:border-gray-900 dark:bg-black-200 dark:shadow-none h-[450px] lg:h-[550px] 2xl:h-[600px] mt-10"
+      )}
+    >
+      <div className="flex flex-row items-center w-full h-[220px] lg:h-[280px] 2xl:h-[370px]">
+        <img
+          alt={data?.title}
+          src={data?.img}
+          className="w-full h-full rounded-t-lg object-cover"
+        />
+      </div>
+      <div className="transition duration-200 group-hover/bento:translate-x-2 px-4 py-2 flex flex-col justify-center items-start gap-3 w-full">
+        <div className="flex flex-row items-center">
+          {data?.iconLists.map((icon, index) => (
+            <img
+              key={index}
+              height="100"
+              width="100"
+              alt="Stacks"
+              src={icon}
+              className="h-8 w-8 rounded-full border-2 object-cover"
+            />
+          ))}
+        </div>
+        <div>
+          <h4 className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
             {data?.title}
-          </h1>
-          <p className="font-normal text-sm text-gray-50 relative z-10 my-2">
+          </h4>
+          <p className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
             {data?.description}
           </p>
-          <div className="w-full flex flex-col justify-start items-start gap-4 lg:gap-0 lg:flex-row lg:justify-between lg:items-center z-10 ">
-            <div className="flex flex-row items-center">
-              {data?.iconLists.map((icon, index) => (
-                <img
-                  key={index}
-                  height="100"
-                  width="100"
-                  alt="Stacks"
-                  src={icon}
-                  className="h-8 w-8 rounded-full border-2 object-cover"
-                />
-              ))}
-            </div>
-            <a href={data?.link} target="_blank" rel="noopener noreferrer">
-              <MagicButton
-                title="Ver projeto"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
-            </a>
-          </div>
         </div>
+        <a href={data?.link} target="_blank" rel="noopener noreferrer">
+          <MagicButton
+            title="Ver projeto"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
       </div>
     </div>
   );
-}
+};
